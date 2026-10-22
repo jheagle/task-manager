@@ -1,0 +1,50 @@
+{
+  "browser": {
+    "enabled": true,
+    "name": "taskManager"
+  },
+  "cleanPaths": [
+    "dist",
+    "browser"
+  ],
+  "docs": {
+    "enabled": true,
+    "from": "assets/js",
+    "gitRevision": "main",
+    "inBuild": false,
+    "index": "MAIN.md",
+    "title": "Task Manager",
+    "to": "../joshuaheagle.local/projects/task-manager/docs"
+  },
+  "dist": {
+    "main": "dist/index.js",
+    "from": "assets/js/**/!(*.test).js",
+    "to": "dist"
+  },
+  "images": {
+    "enabled": true,
+    "from": "assets/img/*",
+    "to": "browser/img"
+  },
+  "readme": {
+    "from": [
+      "assets/js/**/!(*.test).js"
+    ]
+  },
+  "sass": {
+    "enabled": true,
+    "from": "assets/sass/**/*.+(scss|sass)",
+    "path": "assets/sass",
+    "to": "browser/css"
+  },
+  "srcPath": "assets/js",
+  "test": {
+    "options": {
+      "passWithNoTests": true
+    },
+    "path": "assets/js",
+    "watch": "assets/js/**/*.js"
+  },
+  "relativePath": "http://task-manager.local",
+  "databasePath": "database/"
+}
