@@ -62,7 +62,7 @@
     "clean-jsdoc-theme": "^4.3.3",
     "gulp": "^5.0.1",
     "gulp-imagemin": "github:jheagle/gulp-imagemin#common-js-compatibility",
-    "js-build-tools": "^6.6.0",
+    "js-build-tools": "^6.8.0",
     "jsdoc": "^4.0.5",
     "release-it": "^21.1.1",
     "test-filesystem": "^2.0.2"
