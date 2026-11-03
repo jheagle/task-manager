@@ -19,16 +19,17 @@ var taskManager = (() => {
   // js-build-tools-cjs:dist/index.js
   init_process();
   window.jsonDom = jsonDom;
-  var _jsonDomComponents = jsonDomComponents;
-  var text = _jsonDomComponents.text;
-  var main = _jsonDomComponents.main;
-  var header = _jsonDomComponents.header;
-  var heading = _jsonDomComponents.heading;
-  var paragraph = _jsonDomComponents.paragraph;
-  var renderPage = function renderPage2() {
-    var mainHeader = header([heading(1, [text("Task Manager")])]);
-    var mainContent = main([paragraph("A simple storage, retrieval, sorting and prioritizing system for tasks.")]);
-    var documentItem = jsonDom.documentItem;
+  var {
+    text,
+    main,
+    header,
+    heading,
+    paragraph
+  } = jsonDomComponents;
+  var renderPage = () => {
+    const mainHeader = header([heading(1, [text("Task Manager")])]);
+    const mainContent = main([paragraph("A simple storage, retrieval, sorting and prioritizing system for tasks.")]);
+    const documentItem = jsonDom.documentItem;
     jsonDom.updateDomItems(documentItem);
     documentItem.body.children.push(mainHeader, mainContent);
     jsonDom.updateChildNodes(documentItem.body);
